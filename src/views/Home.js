@@ -7,20 +7,20 @@ class Home extends Component {
     constructor(props){
 		super(props);
 		const redirectfrom = this.props.location.redirectfrom;
-		if(redirectfrom=='login'){
-			window.location.reload();
-		}
+		// if(redirectfrom=='login'){
+		// 	window.location.reload();
+		// }
 		$this = this;
 		this.state = {posts:[], keyword:'', tags:[], alltags:[], page:1, limit:5}
 	}
     componentDidMount(){
-        setTimeout(function(){
-            axioApi.get('auth/checkToken').then((res) => {
-                console.log(res.data);
-            }).catch((err) => {
-                $this.props.history.push('/login');
-            });
-        }, 1500);
+        // setTimeout(function(){
+        //     axioApi.get('auth/checkToken').then((res) => {
+        //         console.log(res.data);
+        //     }).catch((err) => {
+        //         $this.props.history.push('/login');
+        //     });
+        // }, 1500);
     }
 
     

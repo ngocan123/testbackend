@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
-import './index.css';
+//import './App.css';
+//import './index.css';
 // import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 // // Be sure to include styles at some point, probably during your bootstraping
 // import '@trendmicro/react-sidenav/dist/react-sidenav.css';
@@ -57,6 +57,7 @@ class App extends Component {
             <div className="container">
                 {/** lets start route in right here */}
                 <Switch>
+                    <Route exact path="/backend" component = {Home} /> {/**this route reference to domain */}
                     <Route exact path="/" component = {Home} /> {/**this route reference to domain */}
                     <Route path="/register" component = {Register} /> {/**this route reference to domain/register */}
                     <Route path="/login" component = {Login} /> {/**this route reference to domain/login */}

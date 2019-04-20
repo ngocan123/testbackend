@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "npm":"6.4.1",
-    "node":"10.15.3"
+    "npm": "6.4.1",
+    "node": "10.15.3"
   },
   "dependencies": {
     "@trendmicro/react-sidenav": "^0.4.5",
     "axios": "^0.18.0",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.3.1",
+    "heroku": "^7.22.9",
     "jquery": "^3.4.0",
     "popper.js": "^1.15.0",
     "ps": "^1.0.0",
