@@ -17,12 +17,14 @@
     "ps": "^1.0.0",
     "query": "^0.2.0",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.1",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
-    "react-select": "^2.4.2"
+    "react-select": "^2.4.2",
+    "react-sidebar": "^3.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,5 +41,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "https://ai-shop2.herokuapp.com/"
+  "proxy": "http://localhost:3008"
 }

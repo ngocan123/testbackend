@@ -15,22 +15,24 @@ class Product extends Component {
         $this = this;
     }
     componentDidMount(){
-        setTimeout(function(){
-            axioApi.get('auth/checkToken').then((res) => {
-                $this.setState({
-                    'author': res.data.id
-                });
-                $this.getDatas();
-                console.log(res.data.id);
-            }).catch((err) => {
-                $this.props.history.push('/login');
-            });
-        },1500);
+        this.getDatas();
+        // setTimeout(function(){
+        //     axioApi.get('auth/checkToken').then((res) => {
+        //         $this.setState({
+        //             'author': res.data.id
+        //         });
+        //         $this.getDatas();
+        //         console.log(res.data.id);
+        //     }).catch((err) => {
+        //         $this.props.history.push('/login');
+        //     });
+        // },1500);
     }
     getDatas(){
         axioApi.get('/product/getAll?author='+$this.state.author).then((res) => {
+            console.log(res);
             $this.setState({ 'products' : res.data });
-            console.log($this.state.author);
+            //console.log($this.state.author);
         });
     }
     deletePost(id){
@@ -56,14 +58,18 @@ class Product extends Component {
     render() {
         return (
             <div>
-                <h1>Product layout</h1>
-                <Link className="nav-link" to='/create-product'><button className="btn btn-sm btn-success">Thên sản phẩm</button></Link>
+                <div className="header-content clearfix">
+                    <h1>Danh sách sản phẩm</h1>
+                    <Link className="nav-link" to='/create/product'><button className="btn btn-sm btn-success flor">Thên sản phẩm</button></Link>
+                </div>
+                <div className="h15"></div>
                 <table className="table table-hover table-border">
                     <thead>
                         <tr>
                             <th>Tên</th>
                             <th>Mô tả</th>
-                            <th>Người đăng</th>
+                            <th>Danh mục</th>
+                            <th>Trạng thái</th>
                             <th>Hành động</th>
                         </tr>
                     </thead>

@@ -12,7 +12,7 @@ if(token){
 	axioApi.get('auth/checkToken').then((res) => { 
         localStorage.setItem('user_id', res.data.id);
 	}).catch((err) => {
-        localStorage.removeItem('token');        
+        localStorage.removeItem('token');   
     });
 }
 
